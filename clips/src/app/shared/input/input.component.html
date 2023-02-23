@@ -1,0 +1,9 @@
+<input [formControl]="control" type="text" class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition
+duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400" placeholder="Enter Name" />
+<ng-container>
+    <p *ngIf="control.touched && control.errors?.required && control.dirty" class="text-red-400 mt-1">Field is required
+    </p>
+    <p *ngIf="control.errors?.minlength" class="text-red-400 mt-1">The value you inputted is not
+
+        of required length.</p>
+</ng-container>
