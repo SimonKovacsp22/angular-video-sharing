@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "clips-c6f16": {
+      "hosting": {
+        "clips": [
+          "clips-c6f16"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "clips-c6f16"
+  }
+}
