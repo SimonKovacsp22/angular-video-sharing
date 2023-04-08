@@ -1,5 +1,5 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { environment } from './environments/environment';
+import { environment } from '../environments/environment';
 import { AppModule } from './app/app.module';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
