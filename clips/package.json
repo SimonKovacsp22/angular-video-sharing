@@ -24,10 +24,13 @@
     "@material-tailwind/html": "^2.0.0",
     "@types/node": "^18.15.11",
     "@types/uuid": "^9.0.1",
+    "@types/video.js": "^7.3.51",
+    "@videojs/themes": "^1.0.1",
     "ngx-mask": "^14.2.4",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "uuid": "^9.0.0",
+    "video.js": "^8.0.4",
     "zone.js": "~0.12.0"
   },
   "devDependencies": {
