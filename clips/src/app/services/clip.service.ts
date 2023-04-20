@@ -82,12 +82,11 @@ export class ClipService implements Resolve<IClip | null> {
         .startAfter(lastDocId);
     }
     const snapshot = await query.get();
-    console.log(length);
 
     snapshot.forEach((doc) => {
       if (
         this.pageClips.length == 0 ||
-        doc.id !== this.pageClips[length - 1].docId
+        doc.id !== this.pageClips[length - 1]?.docId
       ) {
         this.pageClips.push({
           docId: doc.id,

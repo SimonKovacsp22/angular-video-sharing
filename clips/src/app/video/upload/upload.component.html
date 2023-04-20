@@ -18,7 +18,8 @@
               }" class="w-full px-10 py-40 rounded text-center cursor-pointer border border-dashed
               border-gray-400 transition duration-500 hover:text-white
               hover:bg-indigo-400 hover:border-indigo-400 hover:border-solid text-xl">
-                    <h5>Drop your file here (mp4 only!)</h5>
+                    <h5>Drop your file here (mp4 only! <span class="underline">Max 25Mb</span>)</h5>
+
                     <span *ngIf="ffmpegService.isRunning"
                         class="material-icons text-center text-6xl p-8 animate-spin">autorenew</span>
                 </div>
@@ -50,7 +51,12 @@
                         <app-input [control]="title" placeholder="Enter Title"></app-input>
                     </div>
 
-                    <div class="mt-4 text-right">
+                    <div class="mt-4 text-right space-x-4">
+                        <button type="button" [disabled]="inSubmission" (click)="goBack($event)" [ngClass]="{
+                            'opacity-50' : inSubmission,
+                            'hover:bg-indigo-700': !inSubmission
+                        }"
+                            class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm rounded-md text-white bg-indigo-600 focus:outline-none">back</button>
                         <button type="submit" [disabled]="inSubmission" [ngClass]="{
                         'opacity-50' : inSubmission,
                         'hover:bg-indigo-700': !inSubmission

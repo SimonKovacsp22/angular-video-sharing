@@ -62,7 +62,6 @@ export class AuthService {
   public async logout($event?: Event) {
     if ($event) $event.preventDefault();
     await this.auth.signOut();
-    console.log(this.redirect);
     if (this.redirect) {
       await this.router.navigateByUrl('/');
     }

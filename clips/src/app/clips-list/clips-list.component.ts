@@ -15,9 +15,11 @@ export class ClipsListComponent implements OnInit, OnDestroy {
   @Input() scrollable = true;
 
   constructor(public clipService: ClipService) {
-    this.clipService.getClips();
+    this.clipService.getClips;
   }
+
   ngOnInit(): void {
+    console.log(this.clipService.pageClips);
     if (this.scrollable) {
       window.addEventListener('scroll', this.handleScroll);
     }

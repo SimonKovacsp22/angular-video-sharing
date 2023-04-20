@@ -142,9 +142,14 @@ export class UploadComponent implements OnDestroy {
           this.alertMsg = 'Something went wrong while uploading your video.';
           this.alertColor = 'red';
           this.showPercentage = false;
-          this.inSubmission = true;
+          this.inSubmission = false;
           console.error(error);
         },
       });
   }
+
+  goBack = ($event: Event) => {
+    $event.preventDefault();
+    this.nextStep = false;
+  };
 }
